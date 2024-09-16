@@ -1,6 +1,6 @@
 import string
 
-password = "tesTing123"
+password = "qwerty"
 
 upper_case = any([1 if char in string.ascii_uppercase else 0 for char in password])
 lower_case = any([1 if char in string.ascii_lowercase else 0 for char in password])
@@ -20,8 +20,21 @@ if length > 16:
 if length > 20:
     score += 1
 
-print(upper_case)
-print(lower_case)
-print(special_char)
-print(nums)
-print(length)
+# checking common passwords
+with open('pwlist.txt', 'r', encoding="utf8") as f:
+    com1 = f.read().splitlines()
+if password in com1:
+    print("The password is found in a common list")
+
+with open('comlist.txt', 'r', encoding='utf8') as f:
+    com2 = f.read().splitlines()
+if password in com2:
+    print("The password is found in a common list")
+
+
+
+# print(upper_case)
+# print(lower_case)
+# print(special_char)
+# print(nums)
+# print(length)
