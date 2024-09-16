@@ -49,9 +49,3 @@ elif score > 4 and score < 6:
     print(f"Your password is pretty good. Score: {score}/7")
 elif score > 6:
     print(f"Your password is very good. Good job! Score: {score}/7")
-
-# print(upper_case)
-# print(lower_case)
-# print(special_char)
-# print(nums)
-# print(length)
